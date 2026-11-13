@@ -112,7 +112,7 @@ fb.forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.f;fb.forEach(x=>x
 renderProjects();
 
 /* ---------- Admin editor (open the site with #admin, or use the Admin link) ---------- */
-const ADMIN_HASH='d831ad42f6c7b4b322a12233efec840787967fcdd232f504cf19d43ba6ac782c'; // SHA-256 of your passcode. See README to change it.
+const ADMIN_HASH='f9375be0b4b5f2f49ab1585bf84947df5183e0d2b0899fab93aa710ca1f8deba'; // SHA-256 of your passcode. See README to change it.
 const sha=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(x=>x.toString(16).padStart(2,'0')).join('');
 const exportJs=()=>'window.PROJECTS='+JSON.stringify(list,null,2)+';\n';
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(list))}catch(e){}renderProjects();drawAdmin()}
