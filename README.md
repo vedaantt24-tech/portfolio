@@ -16,7 +16,6 @@ Projects live in `projects.js`. You can edit that file in VS Code, or use the ed
 2. Add, edit, or hold the Delete button to remove a project. Changes show only in your own browser.
 3. In the Link field, paste the project's GitHub repo or live website address. Recruiters who click that project go straight there. Projects without a link are not clickable.
 4. Click "Copy projects.js", paste it over the content of `projects.js` in VS Code, and push to GitHub. Vercel then makes it live for everyone.
-Starting passcode: `Yash@Admin2026`. Change it: in your browser console run
 `crypto.subtle.digest('SHA-256',new TextEncoder().encode('YOUR NEW PASSCODE')).then(b=>console.log([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')))`
 and paste the result into `ADMIN_HASH` in `script.js`.
 The passcode is a light lock only. What really protects your site is that nobody but you can push to your GitHub repo.
